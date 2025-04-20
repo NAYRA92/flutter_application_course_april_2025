@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_16_april/login_page.dart';
+import 'package:flutter_application_16_april/onboarding.dart';
 
 import 'homepage.dart';
 import 'im_rich.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Homepage()
+      home: Onboarding()
     );
   }
 }
