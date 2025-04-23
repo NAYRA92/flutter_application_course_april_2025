@@ -3,8 +3,10 @@ import 'package:flutter_application_16_april/login_page.dart';
 import 'package:flutter_application_16_april/onboarding.dart';
 
 import 'bottomnavbar_page.dart';
+import 'custom_navbar.dart';
 import 'homepage.dart';
 import 'im_rich.dart';
+import 'login_page_23_april.dart';
 import 'mycontainer_page.dart';
 import 'signin_signup.dart';
 
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MycontainerPage()
+      home: LoginPage23April()
     );
   }
 }

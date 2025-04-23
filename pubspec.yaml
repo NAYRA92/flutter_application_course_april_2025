@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts:
   lottie:
+  water_drop_nav_bar:
+  google_nav_bar:
+  animated_text_kit:
+  flutter_animate:
 
 
 dev_dependencies:
