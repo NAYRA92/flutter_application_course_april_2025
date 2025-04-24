@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_16_april/signin_signup.dart';
+import 'package:flutter_application_16_april/april_23/signin_signup.dart';
 import 'package:lottie/lottie.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});

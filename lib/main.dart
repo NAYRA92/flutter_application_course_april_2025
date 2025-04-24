@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_16_april/login_page.dart';
-import 'package:flutter_application_16_april/onboarding.dart';
+import 'package:flutter_application_16_april/april_23/login_page.dart';
+import 'package:flutter_application_16_april/april_23/onboarding.dart';
 
-import 'bottomnavbar_page.dart';
-import 'custom_navbar.dart';
-import 'homepage.dart';
-import 'im_rich.dart';
-import 'login_page_23_april.dart';
-import 'mycontainer_page.dart';
-import 'signin_signup.dart';
+import 'design_pages/bottomnavbar_page.dart';
+import 'design_pages/custom_navbar.dart';
+import 'april_23/homepage.dart';
+import 'april_23/im_rich.dart';
+import 'april_23/login_page_23_april.dart';
+import 'design_pages/mycontainer_page.dart';
+import 'april_23/signin_signup.dart';
+import 'sending_data_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginPage23April()
+      home: SendingDataPage()
     );
   }
 }

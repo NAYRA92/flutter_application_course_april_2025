@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
 
 class SigninSignup extends StatefulWidget {
