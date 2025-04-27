@@ -8,6 +8,16 @@ class SendingDataPage extends StatefulWidget {
   State<SendingDataPage> createState() => _SendingDataPageState();
 }
 
+List<String> _names = [
+  "Name 1",
+  "Name 2",
+  "Name 3",
+];
+
+List<String> _cities = ["City 1", "City 2", "City 3"];
+
+List<IconData> _icons = [Icons.home, Icons.location_city, Icons.local_activity];
+
 class _SendingDataPageState extends State<SendingDataPage> {
   TextEditingController _name = TextEditingController();
   TextEditingController _location = TextEditingController();
@@ -16,64 +26,20 @@ class _SendingDataPageState extends State<SendingDataPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: GridView.count(
-          crossAxisCount: 2,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
-          padding: EdgeInsets.all(8),
-          children: [
-            myContainer(Icons.person, () {
+        child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
+          padding: EdgeInsets.all(5),
+          itemCount: _names.length,
+          itemBuilder: (context, index) {
+            return myContainer(_icons[index], () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => ReceivingDataPage(
-                          userName: "Nayra", userCity: "Aden")));
-            }),
-            myContainer(Icons.people_rounded, () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ReceivingDataPage(
-                          userName: "Nayra", userCity: "Aden 2")));
-            }),
-            myContainer(Icons.person_2, () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ReceivingDataPage(
-                          userName: "Nayra", userCity: "Aden 3")));
-            }),
-            myContainer(Icons.person_3, () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => 
-                      ReceivingDataPage(
-                          userName: "Nayra", 
-                          userCity: "Aden 4")));
-            }),
-            myContainer(Icons.person_4, () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ReceivingDataPage(
-                          userName: "Nayra", userCity: "Aden 5")));
-            }),
-            myContainer(Icons.person_add, () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ReceivingDataPage(
-                          userName: "Nayra", userCity: "Aden 5")));
-            }),
-            myContainer(Icons.home, () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ReceivingDataPage(
-                          userName: "Nayra", userCity: "Aden 6")));
-            }),
-          ],
+                          userName: _names[index], userCity: _cities[index])));
+            });
+          },
         ),
 
         // child: Column(
