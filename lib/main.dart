@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_16_april/april_23/login_page.dart';
 import 'package:flutter_application_16_april/april_23/onboarding.dart';
+import 'package:flutter_application_16_april/expo_widgets.dart';
 
 import 'design_pages/bottomnavbar_page.dart';
 import 'design_pages/custom_navbar.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SendingDataPage()
+      home: ExpoWidgets()
     );
   }
 }
